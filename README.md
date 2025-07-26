@@ -1,7 +1,7 @@
 ## PUBLISHED JUST TO NOT LOSE SOURCE CODE AND TO REMEMBER MY FIRST TIME WHEN I CREATED A LOT OF CODE, lol
 # XNANScripter
 
-![demo](https://github.com/ia-alpatov/XNANScripter/raw/master/Demo/Demo.gif "Demo")
+![demo](https://github.com/ia-alpatov/XNANScripter/raw/main/Demo/Demo.gif "Demo")
 
 [NScripter](https://en.wikipedia.org/wiki/NScripter) port to C# (XNA/MonoGame).
 
