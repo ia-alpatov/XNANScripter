@@ -1,0 +1,646 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net8.0</TargetFramework>
+        <RollForward>Major</RollForward>
+        <PublishReadyToRun>false</PublishReadyToRun>
+        <TieredCompilation>false</TieredCompilation>
+    </PropertyGroup>
+    <PropertyGroup>
+        <ApplicationManifest>app.manifest</ApplicationManifest>
+        <ApplicationIcon>Icon.ico</ApplicationIcon>
+    </PropertyGroup>
+    <ItemGroup>
+        <None Remove="Icon.ico"/>
+        <None Remove="Icon.bmp"/>
+    </ItemGroup>
+    <ItemGroup>
+        <EmbeddedResource Include="Icon.ico">
+            <LogicalName>Icon.ico</LogicalName>
+        </EmbeddedResource>
+        <EmbeddedResource Include="Icon.bmp">
+            <LogicalName>Icon.bmp</LogicalName>
+        </EmbeddedResource>
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.*" />
+        <PackageReference Include="MonoGame.Content.Builder.Task" Version="3.8.4" />
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    </ItemGroup>
+    <ItemGroup>
+      <None Remove="Content\e\edb1.jpg" />
+      <Content Include="Content\e\edb1.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\edb2.jpg" />
+      <Content Include="Content\e\edb2.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\edb3.jpg" />
+      <Content Include="Content\e\edb3.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\edb4.jpg" />
+      <Content Include="Content\e\edb4.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\edkari.jpg" />
+      <Content Include="Content\e\edkari.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\edkari2.jpg" />
+      <Content Include="Content\e\edkari2.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\heya.jpg" />
+      <Content Include="Content\e\heya.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\heyairiguti.jpg" />
+      <Content Include="Content\e\heyairiguti.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\house3.jpg" />
+      <Content Include="Content\e\house3.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\house4.jpg" />
+      <Content Include="Content\e\house4.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\ie1.jpg" />
+      <Content Include="Content\e\ie1.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\ie2.jpg" />
+      <Content Include="Content\e\ie2.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\ima.jpg" />
+      <Content Include="Content\e\ima.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\kaidan.jpg" />
+      <Content Include="Content\e\kaidan.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\kaidan2.jpg" />
+      <Content Include="Content\e\kaidan2.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\kubituri.jpg" />
+      <Content Include="Content\e\kubituri.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\kubituri2.jpg" />
+      <Content Include="Content\e\kubituri2.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\kubituri3.jpg" />
+      <Content Include="Content\e\kubituri3.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\kubituri3syouzyo1.jpg" />
+      <Content Include="Content\e\kubituri3syouzyo1.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\kubituri3syouzyo2.jpg" />
+      <Content Include="Content\e\kubituri3syouzyo2.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\kubituri4.jpg" />
+      <Content Include="Content\e\kubituri4.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\kubituri5.jpg" />
+      <Content Include="Content\e\kubituri5.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\kubiturinama.jpg" />
+      <Content Include="Content\e\kubiturinama.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\me.jpg" />
+      <Content Include="Content\e\me.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\me2.jpg" />
+      <Content Include="Content\e\me2.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\nikai.jpg" />
+      <Content Include="Content\e\nikai.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\ningyou.jpg" />
+      <Content Include="Content\e\ningyou.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\ningyou1.jpg" />
+      <Content Include="Content\e\ningyou1.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\ningyou2.jpg" />
+      <Content Include="Content\e\ningyou2.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\otoutoheyanonaka.jpg" />
+      <Content Include="Content\e\otoutoheyanonaka.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\otoutoheyanonaka2.jpg" />
+      <Content Include="Content\e\otoutoheyanonaka2.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\otoutonoheya.jpg" />
+      <Content Include="Content\e\otoutonoheya.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\rouka.jpg" />
+      <Content Include="Content\e\rouka.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\rouka2.jpg" />
+      <Content Include="Content\e\rouka2.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\rouka3.jpg" />
+      <Content Include="Content\e\rouka3.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\rouka4.jpg" />
+      <Content Include="Content\e\rouka4.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\rouka5.jpg" />
+      <Content Include="Content\e\rouka5.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\rouka6.jpg" />
+      <Content Include="Content\e\rouka6.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\rouka7.jpg" />
+      <Content Include="Content\e\rouka7.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\rouka8.jpg" />
+      <Content Include="Content\e\rouka8.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\rouka9.jpg" />
+      <Content Include="Content\e\rouka9.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\sara.jpg" />
+      <Content Include="Content\e\sara.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\shyokki.jpg" />
+      <Content Include="Content\e\shyokki.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\te.jpg" />
+      <Content Include="Content\e\te.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\title.jpg" />
+      <Content Include="Content\e\title.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\title0.jpg" />
+      <Content Include="Content\e\title0.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\title2.jpg" />
+      <Content Include="Content\e\title2.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\title3.jpg" />
+      <Content Include="Content\e\title3.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\title4.jpg" />
+      <Content Include="Content\e\title4.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\title5.jpg" />
+      <Content Include="Content\e\title5.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\top.jpg" />
+      <Content Include="Content\e\top.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\top2.jpg" />
+      <Content Include="Content\e\top2.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\toriaezu.jpg" />
+      <Content Include="Content\e\toriaezu.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\yaneura.jpg" />
+      <Content Include="Content\e\yaneura.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\yaneura2.jpg" />
+      <Content Include="Content\e\yaneura2.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\yumedoor.jpg" />
+      <Content Include="Content\e\yumedoor.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\00.utf" />
+      <Content Include="Content\00.utf">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\TestFont.spritefont" />
+      <Content Include="Content\TestFont.spritefont">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\akeru.wav" />
+      <Content Include="Content\m\akeru.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\akeru1.wav" />
+      <Content Include="Content\m\akeru1.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\ame2.mp3" />
+      <Content Include="Content\m\ame2.mp3">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\asioto.wav" />
+      <Content Include="Content\m\asioto.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\book1.wav" />
+      <Content Include="Content\m\book1.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\botan.wav" />
+      <Content Include="Content\m\botan.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\bukimi.mp3" />
+      <Content Include="Content\m\bukimi.mp3">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\butukaru.wav" />
+      <Content Include="Content\m\butukaru.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\byouinn.mp3" />
+      <Content Include="Content\m\byouinn.mp3">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\close.wav" />
+      <Content Include="Content\m\close.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\cook1.mp3" />
+      <Content Include="Content\m\cook1.mp3">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\cook2.mp3" />
+      <Content Include="Content\m\cook2.mp3">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\dageki.wav" />
+      <Content Include="Content\m\dageki.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\dageki2.wav" />
+      <Content Include="Content\m\dageki2.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\denwa.wav" />
+      <Content Include="Content\m\denwa.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\door.wav" />
+      <Content Include="Content\m\door.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\door2.wav" />
+      <Content Include="Content\m\door2.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\door3.wav" />
+      <Content Include="Content\m\door3.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\doortogi.wav" />
+      <Content Include="Content\m\doortogi.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\garasu1.wav" />
+      <Content Include="Content\m\garasu1.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\garasuhumu.wav" />
+      <Content Include="Content\m\garasuhumu.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\hakokeru.wav" />
+      <Content Include="Content\m\hakokeru.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\hasiru2.wav" />
+      <Content Include="Content\m\hasiru2.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\hennaoto.wav" />
+      <Content Include="Content\m\hennaoto.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\hikizuru.wav" />
+      <Content Include="Content\m\hikizuru.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\hitowohikizuru.wav" />
+      <Content Include="Content\m\hitowohikizuru.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\isu.wav" />
+      <Content Include="Content\m\isu.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\kagikakarann.wav" />
+      <Content Include="Content\m\kagikakarann.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\kagikakatta.wav" />
+      <Content Include="Content\m\kagikakatta.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\kaidan.wav" />
+      <Content Include="Content\m\kaidan.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\kaidan1.wav" />
+      <Content Include="Content\m\kaidan1.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\katasimeru.wav" />
+      <Content Include="Content\m\katasimeru.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\kinzokubaddo.wav" />
+      <Content Include="Content\m\kinzokubaddo.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\kishimi1.wav" />
+      <Content Include="Content\m\kishimi1.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\kishimi2.wav" />
+      <Content Include="Content\m\kishimi2.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\kishimi3.mp3" />
+      <Content Include="Content\m\kishimi3.mp3">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\kishimi3.wav" />
+      <Content Include="Content\m\kishimi3.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\kubituri.wav" />
+      <Content Include="Content\m\kubituri.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\kuruma.mp3" />
+      <Content Include="Content\m\kuruma.mp3">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\kuruma.wav" />
+      <Content Include="Content\m\kuruma.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\kyouhu.mp3" />
+      <Content Include="Content\m\kyouhu.mp3">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\loop.wav" />
+      <Content Include="Content\m\loop.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\mizu.mp3" />
+      <Content Include="Content\m\mizu.mp3">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\monooto.wav" />
+      <Content Include="Content\m\monooto.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\nageru.wav" />
+      <Content Include="Content\m\nageru.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\nakigoe.wav" />
+      <Content Include="Content\m\nakigoe.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\namaoto1.wav" />
+      <Content Include="Content\m\namaoto1.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\namaoto2.wav" />
+      <Content Include="Content\m\namaoto2.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\namaoto3.wav" />
+      <Content Include="Content\m\namaoto3.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\namaoto5.wav" />
+      <Content Include="Content\m\namaoto5.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\nazohue.mp3" />
+      <Content Include="Content\m\nazohue.mp3">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\nob.wav" />
+      <Content Include="Content\m\nob.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\nob1.wav" />
+      <Content Include="Content\m\nob1.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\nob2.wav" />
+      <Content Include="Content\m\nob2.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\nob3.wav" />
+      <Content Include="Content\m\nob3.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\noise.wav" />
+      <Content Include="Content\m\noise.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\noise2.wav" />
+      <Content Include="Content\m\noise2.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\nokku.wav" />
+      <Content Include="Content\m\nokku.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\nuno.wav" />
+      <Content Include="Content\m\nuno.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\nuno2.wav" />
+      <Content Include="Content\m\nuno2.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\otouto.mp3" />
+      <Content Include="Content\m\otouto.mp3">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\rain.wav" />
+      <Content Include="Content\m\rain.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\rakka.wav" />
+      <Content Include="Content\m\rakka.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\simeru.wav" />
+      <Content Include="Content\m\simeru.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\sinzou.wav" />
+      <Content Include="Content\m\sinzou.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\swing2.wav" />
+      <Content Include="Content\m\swing2.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\switch.wav" />
+      <Content Include="Content\m\switch.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\syokuzi.wav" />
+      <Content Include="Content\m\syokuzi.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\taoreru.wav" />
+      <Content Include="Content\m\taoreru.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\tataku.wav" />
+      <Content Include="Content\m\tataku.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\tatu.wav" />
+      <Content Include="Content\m\tatu.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\ti.wav" />
+      <Content Include="Content\m\ti.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\todana.wav" />
+      <Content Include="Content\m\todana.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\tokei.wav" />
+      <Content Include="Content\m\tokei.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\tyoukai.mp3" />
+      <Content Include="Content\m\tyoukai.mp3">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\warai.wav" />
+      <Content Include="Content\m\warai.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\warai3.wav" />
+      <Content Include="Content\m\warai3.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\waru.wav" />
+      <Content Include="Content\m\waru.wav">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\m\yume.mp3" />
+      <Content Include="Content\m\yume.mp3">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
+    <ItemGroup>
+      <None Remove="Content\e\back1.jpg" />
+      <Content Include="Content\e\back1.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\back2.jpg" />
+      <Content Include="Content\e\back2.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\beddo.jpg" />
+      <Content Include="Content\e\beddo.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\beddo2.jpg" />
+      <Content Include="Content\e\beddo2.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\book.jpg" />
+      <Content Include="Content\e\book.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\denwa.jpg" />
+      <Content Include="Content\e\denwa.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\denwa2.jpg" />
+      <Content Include="Content\e\denwa2.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\door1.jpg" />
+      <Content Include="Content\e\door1.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\door2.jpg" />
+      <Content Include="Content\e\door2.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\door3.jpg" />
+      <Content Include="Content\e\door3.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\ed1.jpg" />
+      <Content Include="Content\e\ed1.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\ed2.jpg" />
+      <Content Include="Content\e\ed2.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\ed3.jpg" />
+      <Content Include="Content\e\ed3.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+      <None Remove="Content\e\ed4.jpg" />
+      <Content Include="Content\e\ed4.jpg">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
+    <ItemGroup>
+      <None Remove="Content\Content.mgcb" />
+      <MonoGameContentReference Include="Content\Content.mgcb" />
+    </ItemGroup>
+    <Target Name="RestoreDotnetTools" BeforeTargets="CollectPackageReferences">
+        <Message Text="Restoring dotnet tools (this might take a while depending on your internet speed and should only happen upon building your project for the first time, or after upgrading MonoGame, or clearing your nuget cache)" Importance="High"/>
+        <Exec Command="dotnet tool restore"/>
+    </Target>
+</Project>
